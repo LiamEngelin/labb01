@@ -1,6 +1,8 @@
-﻿void labb01(string inputString)
+﻿void labb01()
 {
-
+    Console.WriteLine("Mata in en sträng");
+    string inputString = Console.ReadLine();
+    Console.WriteLine();
     // Ny hashset för utskriva substrings
     HashSet<string> printedSubstrings = new HashSet<string>();
 
@@ -38,6 +40,13 @@
             }
         }
     }
+    long summa = 0;
+    foreach (string s in printedSubstrings)
+    {
+        summa += Convert.ToInt64(s);
+    }
+    Console.WriteLine();
+    Console.WriteLine($"Summan av delsträngarna är {summa}");
 }
 
 void writeColored(string theFullString, string theSubstring)
@@ -56,4 +65,4 @@ void writeColored(string theFullString, string theSubstring)
     }
 }
 
-labb01("511586162272249122u727264482");
+labb01();
